@@ -123,6 +123,10 @@ type variableProperties struct {
 		Pdk struct {
 			Enabled *bool
 		}
+
+                Target_shim_libs struct {
+			Cppflags []string
+               }
 	} `android:"arch_variant"`
 }
 
@@ -203,7 +207,8 @@ type productVariables struct {
 	Override_rs_driver *string `json:",omitempty"`
 
 	DeviceKernelHeaders []string `json:",omitempty"`
-
+        
+        Target_shim_libs  *string `json:",omitempty"`
 	BoardUsesQTIHardware *bool `json:",omitempty"`
 	BoardUsesQCOMHardware *bool `json:",omitempty"`
 	TargetUsesQCOMBsp *bool `json:",omitempty"`
